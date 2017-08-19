@@ -11,3 +11,30 @@
 - Search for SSH server addon and install it
 - Set password and restart SSH server
 - ssh root@hassio.local and enter newly set password
+#### Setting up static IP ####
+- Access SD card from another machine
+- Go to system-connections folder
+- Edit resin-sample file and the following info:
+```[connection]
+id=my-ethernet
+type=ethernet
+interface-name=eth0
+permissions=
+secondaries=
+
+[ethernet]
+mac-address-blacklist=
+
+[ipv4]
+address1=<your ip>
+dns=<your_dns_servers>;
+dns-search=
+method=manual
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+method=auto
+```
+- Put the SD card back to your Pi and turn on
+- Should be able to access using new IP

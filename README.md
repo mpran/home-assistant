@@ -36,5 +36,9 @@ addr-gen-mode=stable-privacy
 dns-search=
 method=auto
 ```
-- Put the SD card back to your Pi and turn on
+- Put the SD card back to your Pi and turn on the device
 - Should be able to access using new IP
+
+### Working in ResinOS ###
+- `/usr/bin/hassio homeassistant restart` - restarts home assistant
+- `/usr/bin/hassio homeassistant check` - check if configuration is valid. Perfect when you're making changes and need to make sure if everything is cool with the system before trying to restart.

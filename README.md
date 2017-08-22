@@ -37,6 +37,7 @@ addr-gen-mode=stable-privacy
 dns-search=
 method=auto
 ```
+- Rename resin-sample to eth0 or whatever you want (optional)
 - Put the SD card back to your Pi and turn on the device
 - Should be able to access using new IP
 

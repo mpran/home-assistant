@@ -15,8 +15,9 @@
 - Access SD card from another machine
 - Go to system-connections folder
 - Edit resin-sample file and the following info:
-```[connection]
-id=my-ethernet
+```
+[connection]
+id=eth0
 type=ethernet
 interface-name=eth0
 permissions=
@@ -26,8 +27,8 @@ secondaries=
 mac-address-blacklist=
 
 [ipv4]
-address1=<your ip>
-dns=<your_dns_servers>;
+address1=<static_ip>/24,<default_gateway>
+dns=<dns_server1>;<dns_server2>;
 dns-search=
 method=manual
 

@@ -51,6 +51,8 @@ sensor:
 tts:
   - platform: google_translate
 
+system_health:
+
 group: !include groups.yaml
 #automation: !include automations.yaml
 

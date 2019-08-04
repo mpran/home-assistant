@@ -56,5 +56,5 @@ system_health:
 group: !include groups.yaml
 #automation: !include automations.yaml
 
-switch: !include switch.yaml
+tplink: !include tplink.yaml
 automation: !include automations.yaml

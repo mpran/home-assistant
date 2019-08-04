@@ -1,20 +1,7 @@
-- platform: tplink
-  host: 192.168.2.115
-  name: Basement Bar Lights
-  scan_interval: 1
-
-- platform: tplink
-  host: 192.168.2.136
-  name: Basement Bar Wall Lights
-
-- platform: tplink
-  host: 192.168.1.119
-  name: Living Room Tree Lights
-
-- platform: tplink
-  host: 192.168.2.126
-  name: Basement bar ceiling lights
-  
-- platform: tplink
-  host: 192.168.2.143
-  name: Basement main lights
+- tplink:
+    switch:
+      - host: 192.168.2.115
+      - host: 192.168.2.126
+      - host: 192.168.2.143
+      - host: 192.168.2.136
+      - host: 192.168.1.119

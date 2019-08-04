@@ -54,7 +54,5 @@ tts:
 system_health:
 
 group: !include groups.yaml
-#automation: !include automations.yaml
 
-tplink: !include tplink.yaml
 automation: !include automations.yaml

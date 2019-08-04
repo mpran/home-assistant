@@ -1,9 +1,8 @@
-tplink:
-  discovery: false
-  switch:
-    - host: 192.168.2.136 # Basement Bar Wall Lights
-    - host: 192.168.1.119 # Living Room Tree Lights
-  light:
-    - host: 192.168.2.143 # Basement main lights
-    - host: 192.168.2.126 # Basement bar ceiling lights
-    - host: 192.168.2.115 # Basement Bar Lights
+discovery: false
+switch:
+  - host: 192.168.2.136 # Basement Bar Wall Lights
+  - host: 192.168.1.119 # Living Room Tree Lights
+light:
+  - host: 192.168.2.143 # Basement main lights
+  - host: 192.168.2.126 # Basement bar ceiling lights
+  - host: 192.168.2.115 # Basement Bar Lights

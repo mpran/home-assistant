@@ -53,6 +53,9 @@ tts:
 
 system_health:
 
+mqtt:
+  broker: mosquitto
+
 group: !include groups.yaml
 
 automation: !include automations.yaml

@@ -1,9 +1,11 @@
+#!/bin/bash
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     gnupg \
-    lsb-release
+    lsb-release \
+    git
 
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -18,3 +20,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     docker-ce-cli \
     containerd.io \
     docker-compose-plugin
+
+git clone https://github.com/mpran/home-assistant.git
+cd home-assistant

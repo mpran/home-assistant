@@ -49,10 +49,16 @@ backup:
 
 influxdb:
   host: localhost
+  port: 8086
   username: !secret influx_db_username
   password: !secret influx_db_password
   database: homeassistant
-  measurement_attr: entity_id
+  default_measurement: state
+  max_retries: 3
+  include:
+    entities:
+      - sensor.dining_room_temperature
+      - sensor.dining_room_humidity
 
 group: !include groups.yaml
 

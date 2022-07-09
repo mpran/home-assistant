@@ -1,1 +1,19 @@
 ---
+- id: '1657221458522'
+  alias: Lock Garage Door
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00:00'
+  condition:
+  - condition: device
+    device_id: b9d808371d6bdd67d224050a4de2e464
+    domain: lock
+    entity_id: lock.garage_door_interior
+    type: is_unlocked
+  action:
+  - device_id: b9d808371d6bdd67d224050a4de2e464
+    domain: lock
+    entity_id: lock.garage_door_interior
+    type: lock
+  mode: single

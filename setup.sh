@@ -48,5 +48,7 @@ echo "Installing supervised package"
 wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
 sudo dpkg -i homeassistant-supervised.deb
 
+git clone https://github.com/mpran/home-assistant.git
+
 echo "Restarting to apply settings. OS might take some time to come back up, be patient"
 sudo shutdown -r now

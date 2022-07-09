@@ -47,6 +47,13 @@ cloud:
 
 backup:
 
+influxdb:
+  host: localhost
+  username: !secret influx_db_username
+  password: !secret influx_db_password
+  database: homeassistant
+  measurement_attr: entity_id
+
 group: !include groups.yaml
 
 automation: !include automations.yaml

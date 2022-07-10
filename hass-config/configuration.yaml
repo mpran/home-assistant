@@ -56,9 +56,11 @@ influxdb:
   default_measurement: state
   max_retries: 3
   include:
-    entities:
-      - sensor.dining_room_temperature
-      - sensor.dining_room_humidity
+    entity_globs:
+      - "*temperature*"
+      - "*humidity*"
+    domains:
+      - sensor
 
 group: !include groups.yaml
 

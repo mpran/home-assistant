@@ -47,6 +47,21 @@ cloud:
 
 backup:
 
+influxdb:
+  host: localhost
+  port: 8086
+  username: !secret influx_db_username
+  password: !secret influx_db_password
+  database: homeassistant
+  default_measurement: state
+  max_retries: 3
+  include:
+    entity_globs:
+      - "*temperature*"
+      - "*humidity*"
+    domains:
+      - sensor
+
 group: !include groups.yaml
 
 automation: !include automations.yaml

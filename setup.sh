@@ -6,7 +6,8 @@ install_packages() {
 
 download_latest_os_agent() {
     version=$(curl --silent "https://api.github.com/repos/home-assistant/os-agent/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
-    wget -O os-agent.deb https://github.com/home-assistant/os-agent/releases/download/$version/os-agent_"$version"_linux_armv7.deb
+    arch_file="${1:-armv7}"
+    wget -O os-agent.deb https://github.com/home-assistant/os-agent/releases/download/$version/os-agent_"$version"_linux_"$arch_file".deb
 }
 
 sudo apt-get update
@@ -38,7 +39,7 @@ install_packages ca-certificates \
     dbus
 
 echo "Installing os-agent"
-download_latest_os_agent
+download_latest_os_agent $1
 sudo dpkg -i os-agent.deb
 
 echo "Verifying os-agent installation"
